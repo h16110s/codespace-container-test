@@ -1,3 +1,7 @@
+# -------------------------------------------------------------------------------------------------------
+# https://github.com/microsoft/vscode-dev-containers/blob/main/containers/ubuntu/.devcontainer/Dockerfile
+# -------------------------------------------------------------------------------------------------------
+
 # [Choice] Ubuntu version (use jammy or bionic on local arm64/Apple Silicon): jammy, focal, bionic
 ARG VARIANT="focal"
 FROM buildpack-deps:${VARIANT}-curl
@@ -18,4 +22,3 @@ RUN yes | unminimize 2>&1 \
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
 
-RUN apt-get update && apt-get -y install vim
